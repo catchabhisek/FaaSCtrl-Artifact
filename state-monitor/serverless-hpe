@@ -1,0 +1,1 @@
+L1-dcache-load-misses,L1-icache-load-misses,frontend_retired.l2_miss,instructions,cpu-cycles

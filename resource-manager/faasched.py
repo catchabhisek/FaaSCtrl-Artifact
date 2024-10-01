@@ -27,7 +27,7 @@ from statistics import mean
 from random import randrange
 import csv
 
-FAAS_ROOT="/home/abhisek/Serverless-SLA/faas-profiler"
+FAAS_ROOT="/home/abhisek/Serverless-SLA/FaaSCtrl-Artifact"
 sys.path = [FAAS_ROOT, FAAS_ROOT+'/database'] + sys.path
 from ContactDB import GetCountLSRecordsSince
 from ContactDB import FlushActivation
@@ -93,7 +93,7 @@ class Critic(nn.Module):
         return value
 
 class ServerlessAgent:
-    def __init__(self, sperf_weight, sfair_weight, tau) -> None:
+    def __init__(self, sperf_weight=1, sfair_weight=1, tau=0.5) -> None:
         hidden_size = 200
         learning_rate = 1e-4
         state_space = 13
